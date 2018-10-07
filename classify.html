@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.引入MUI的CSS -->
+    <!-- <link rel="stylesheet" href="./lib/mui/css/mui.css"> -->
+    <!-- 2.引入字体图标的CSS -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入比价搜索的less文件 -->
+    <link rel="stylesheet/less" href="./less/classify.less">
+    <!-- 4.引入less的编译器文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body onload="load()">
+    <!-- 头部区域 -->
+    <header id="header">
+        <!-- logo区域 -->
+        <div class="logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <!-- 下载区域 -->
+        <div class="download">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 搜索框区域 -->
+    <section id="search">
+        <form action="">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button">搜索</button>
+        </form>
+    </section>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <section class="dropdown">
+            <!-- 标题区域 -->
+            <div class="title">
+                <a href="#">大 家 电
+                    <i class="fa fa-arrow-down"></i>
+                </a>
+            </div>
+            <!-- 内容区域 -->
+            <div class="content">
+                <ul>
+                    <!-- <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li><a href="#">平板电脑</a></li>
+                    <li></li>
+                    <li></li> -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 按钮区域 -->
+        <section class="buttonList">
+            <ul>
+                <li>
+                    <a href="javascript: void(0);">登录</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">注册</a>
+                </li>
+                <li>
+                    <a href="#top" class="fa fa-arrow-circle-up">返回顶部</a>
+                </li>
+            </ul>
+        </section>
+        <!-- 文字区域 -->
+        <section class="text">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                <span> -- 掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </section>
+    </footer>
+
+    <!-- 页面loading区域 -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+                <div class="object" id="object_five"></div>
+                <div class="object" id="object_six"></div>
+                <div class="object" id="object_seven"></div>
+                <div class="object" id="object_eight"></div>
+                <div class="object" id="object_nine"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 5.引入mui的js文件 -->
+    <!-- <script src="./lib/mui/js/mui.js"></script> -->
+    <!-- 6.引入zepto的js文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 7.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入分类的js文件 -->
+    <script src="./js/classify.js"></script>
+
+    <!-- 准备分类标题的模板 -->
+    <script type="text/html" id="titleTpl">
+        {{ each result value }}
+            <!-- 标题区域 -->
+            <div  class="title" onclick="titleMain({{ value.titleId }})">
+                <a href="javascript: mainContent({{ value.titleId }})">{{ value.title }}<i id="id{{ value.titleId }}" class="fa fa-arrow-down"></i></a>
+            </div>
+            <!-- 内容区域 -->
+            <div class="content">
+                <ul id="id{{ value.titleId }}" class="clearfix"></ul>
+            </div>        
+        {{ /each }}
+    </script>
+
+    <!-- 准备分类内容的模板 -->
+    <script type="text/html" id="contentTpl">
+        {{each result value }}
+                <li><a href="productsList.html?id={{value.categoryId}}&name={{ value.category }}">{{value.category}}</a></li>
+    
+        {{ /each }}
+    </script>
+</body>
+
+</html>

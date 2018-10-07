@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <title>Document</title>
+    <!-- 1.引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 2.引入字体图标的css -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入商品列表的less文件 -->
+    <link rel="stylesheet/less" href="./less/productsList.less">
+    <!-- 4.引入less的编辑器文件 -->
+    <script src="./lib/less/less.js"></script>
+
+</head>
+
+<body onload="load()">
+
+    <!-- 头部区域 -->
+    <header id="header">
+        <!-- logo区域 -->
+        <div class="logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <!-- 下载区域 -->
+        <div class="download">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 搜索框区域 -->
+    <section id="search">
+        <form action="">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button">搜索</button>
+        </form>
+    </section>
+
+    <!-- 导航栏区域 -->
+    <nav id="nav">
+        <ul class="clearfix">
+            <li>
+                <a href="./index.html">首页 ></a>
+            </li>
+            <li>
+                <a href="./classify.html">全部分类 ></a>
+            </li>
+            <li>
+                <a href="javascript: location.reload()"></a>
+            </li>
+            <!-- 筛选按钮 -->
+            <li class="filtrate">
+                <a href="#">筛选</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 商品列表区域 -->
+    <main id="products">
+        <ul>
+            <!-- <li>
+                <a href="#" class="clearfix">
+                    <div class="icon">
+                        <img src="http://img2017.manmanbuy.com/Thumb_2018100022211349858.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>限地区：LittleSwan 小天鹅 TG80V20WDX 变频 滚筒洗衣机 8公斤</p>
+                        <p>¥2299.00 </p>
+                        <p>
+                            <span>报价(6) </span>
+                            <span>评论(2286)</span>
+                        </p>
+                    </div>
+                </a>
+            </li> -->
+        </ul>
+    </main>
+
+    <!-- 分页区域 -->
+    <section id="page" class="clearfix">
+        <div class="up">
+            <a href="#top">上一页</a>
+        </div>
+        <div class="paging">
+            <select></select>
+        </div>
+        <div class="down">
+            <a href="#top">下一页</a>
+        </div>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 按钮区域 -->
+        <section class="buttonList">
+            <ul>
+                <li>
+                    <a href="javascript: void(0);">登录</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">注册</a>
+                </li>
+                <li>
+                    <a href="#header" class="fa fa-arrow-circle-up">返回顶部</a>
+                </li>
+            </ul>
+        </section>
+        <!-- 文字区域 -->
+        <section class="text">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                <span> -- 掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </section>
+    </footer>
+
+    <!-- 筛选区域 -->
+    <section id="filtratePage">
+        <div class="headTitle">
+            筛选
+            <i class="fa fa-times"></i>
+        </div>
+        <div class="content">
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">品牌</span>
+                    <span class="selt">全部品牌</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部品牌</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_4_0_0_0_0_0_0_0_0_1.aspx">海信</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_7_0_0_0_0_0_0_0_0_1.aspx">夏普</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16036_0_0_0_0_0_0_0_0_1.aspx">小米</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_9_0_0_0_0_0_0_0_0_1.aspx">创维</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_8_0_0_0_0_0_0_0_0_1.aspx">TCL</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_15_0_0_0_0_0_0_0_0_1.aspx">索尼</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_11_0_0_0_0_0_0_0_0_1.aspx">长虹</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_10_0_0_0_0_0_0_0_0_1.aspx">飞利浦</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_12_0_0_0_0_0_0_0_0_1.aspx">康佳</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_3_0_0_0_0_0_0_0_0_1.aspx">海尔(Haier)</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_6_0_0_0_0_0_0_0_0_1.aspx">三星</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16046_0_0_0_0_0_0_0_0_1.aspx">乐视</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_27_0_0_0_0_0_0_0_0_1.aspx">LG</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_24355_0_0_0_0_0_0_0_0_1.aspx">微鲸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16049_0_0_0_0_0_0_0_0_1.aspx">酷开</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_28013_0_0_0_0_0_0_0_0_1.aspx">17TV</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_24356_0_0_0_0_0_0_0_0_1.aspx">暴风TV</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_28395_0_0_0_0_0_0_0_0_1.aspx">雷鸟</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16311_0_0_0_0_0_0_0_0_1.aspx">模卡</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_26457_0_0_0_0_0_0_0_0_1.aspx">风行电视</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16191_0_0_0_0_0_0_0_0_1.aspx">KKTV</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_187_0_0_0_0_0_0_0_0_1.aspx">东芝</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_406_0_0_0_0_0_0_0_0_1.aspx">AOC</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_253_0_0_0_0_0_0_0_0_1.aspx">熊猫</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_276_0_0_0_0_0_0_0_0_1.aspx">清华同方</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_152_0_0_0_0_0_0_0_0_1.aspx">联想</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_131_0_0_0_0_0_0_0_0_1.aspx">三洋</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_51_0_0_0_0_0_0_0_0_1.aspx">先锋</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_407_0_0_0_0_0_0_0_0_1.aspx">惠科</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_208_0_0_0_0_0_0_0_0_1.aspx">乐华</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_14_0_0_0_0_0_0_0_0_1.aspx">松下</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_5143_0_0_0_0_0_0_0_0_1.aspx">欧宝丽</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16051_0_0_0_0_0_0_0_0_1.aspx">哈呢</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16048_0_0_0_0_0_0_0_0_1.aspx">统帅</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16047_0_0_0_0_0_0_0_0_1.aspx">创佳</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16052_0_0_0_0_0_0_0_0_1.aspx">海力</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_150_0_0_0_0_0_0_0_0_1.aspx">京东方</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16050_0_0_0_0_0_0_0_0_1.aspx">彩迅</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16054_0_0_0_0_0_0_0_0_1.aspx">SVA</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_347_0_0_0_0_0_0_0_0_1.aspx">现代</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16055_0_0_0_0_0_0_0_0_1.aspx">美乐</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16175_0_0_0_0_0_0_0_0_1.aspx">多方达</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_510_0_0_0_0_0_0_0_0_1.aspx">新科</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16053_0_0_0_0_0_0_0_0_1.aspx">PLATINA</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_16056_0_0_0_0_0_0_0_0_1.aspx">INESA</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_21_0_0_0_0_0_0_0_0_1.aspx">日立</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_22593_0_0_0_0_0_0_0_0_1.aspx">卡萨帝</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_217_0_0_0_0_0_0_0_0_1.aspx">其他</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">品类</span>
+                    <span class="selt">全部品类</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部品类</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_1_0_0_0_0_0_1.aspx">液晶电视</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_13527_0_0_0_0_0_1.aspx">曲面电视</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_13528_0_0_0_0_0_1.aspx">3D电视</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_3_0_0_0_0_0_1.aspx">会议/广告机</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_13530_0_0_0_0_0_1.aspx">激光/影院电视</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">尺寸</span>
+                    <span class="selt">全部尺寸</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部尺寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_7_0_0_0_0_1.aspx">32英寸以下</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_8_0_0_0_0_1.aspx">32英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_9_0_0_0_0_1.aspx">37-39英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_1141_0_0_0_0_1.aspx">40-42英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_10674_0_0_0_0_1.aspx">43-45英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_1120_0_0_0_0_1.aspx">46-49英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_10_0_0_0_0_1.aspx">50-52英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_11_0_0_0_0_1.aspx">55-58英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_1122_0_0_0_0_1.aspx">60-65英寸</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_12_0_0_0_0_1.aspx">65英寸以上</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">分辨率</span>
+                    <span class="selt">全部分辨率</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部分辨率</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_20_0_0_0_1.aspx">超高清4K</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_21_0_0_0_1.aspx">全高清1080P</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_22_0_0_0_1.aspx">高清720P</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_24_0_0_0_1.aspx">其它</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">3D</span>
+                    <span class="selt">全部3D</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部功能</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_880_0_0_1.aspx">智能网络电视</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_9308_0_0_1.aspx">普通电视</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">观看距离</span>
+                    <span class="selt">全部观看距离</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部观看距离</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_12872_1.aspx">小卧室（1.7米以下）</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_12873_1.aspx">小客厅/卧室（1.8~2.5米）</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_12874_1.aspx">小客厅/卧室（2.6~3.0米）</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_12875_1.aspx">中客厅（3.1~4.0米）</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_12876_1.aspx">大客厅（4.1~5.0米）</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_12877_1.aspx">大客厅（5.0米以上）</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">价格</span>
+                    <span class="selt">全部价格</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部价格</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_1-1500_0_0_0_0_0_0_1.aspx">1-1499</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_1500-3000_0_0_0_0_0_0_1.aspx">1500-2999</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_3000-4500_0_0_0_0_0_0_1.aspx">3000-4499</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_4500-6000_0_0_0_0_0_0_1.aspx">4500-5999</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_6000-8000_0_0_0_0_0_0_1.aspx">6000-7999</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_8000-10000_0_0_0_0_0_0_1.aspx">8000-9999</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_0_10000-0_0_0_0_0_0_0_1.aspx">10000以上</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="rowhead">
+                    <span class="tit">评价</span>
+                    <span class="selt">全部评价</span>
+                    <a href="#">∨</a>
+                </div>
+                <div class="rowbody">
+                    <ul>
+                        <li class="active">
+                            <a href="cpl_4_qz_0_0_0_0_0_0_0_0_0_1.aspx">全部评分</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_4.8_0_0_0_0_0_0_0_1.aspx">4.8分及以上</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_4.6_0_0_0_0_0_0_0_1.aspx">4.6分及以上</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_4.4_0_0_0_0_0_0_0_1.aspx">4.4分及以上</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_4.2_0_0_0_0_0_0_0_1.aspx">4.2分及以上</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_4_0_0_0_0_0_0_0_1.aspx">4分及以上</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_3.5_0_0_0_0_0_0_0_1.aspx">3.5分及以上</a>
+                        </li>
+                        <li>
+                            <a href="cpl_4_qz_0_3_0_0_0_0_0_0_0_1.aspx">3分及以上</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 遮罩层区域 -->
+    <div id="mask"></div>
+
+    <!-- 页面loading区域 -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+                <div class="object" id="object_five"></div>
+                <div class="object" id="object_six"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5.引入jQuery的js文件 -->
+    <script  src="./lib/jquery/jquery.js"></script>
+    <!-- 6.引入bootstrap的js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入商品列表的js文件 -->
+    <script src="./js/productsList.js"></script>
+
+    <!-- 准备商品列表的模板 -->
+    <script type="text/html" id="tpl">
+        {{ each result value}}
+            <li>
+                <a href="productDetails.html?productId={{ value.productId }}&categoryId={{ value.categoryId }}&brandName={{ value.brandName }}" class="clearfix">
+                    <div class="icon">
+                        {{@ value.productImg }}
+                    </div>
+                    <div class="text">
+                        <p>{{ value.productName }}</p>
+                        <p>{{ value.productPrice }}</p>
+                        <p>
+                            <span>{{ value.productQuote }}</span>
+                            <span>{{ value.productCom }}</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        {{ /each}}
+    </script>
+</body>
+
+</html>

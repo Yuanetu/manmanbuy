@@ -1,0 +1,149 @@
+// 初始化样式
+* {
+    margin: 0;
+    padding: 0;
+
+    /*在移动端设置盒模型border-box 是为了防止元素添加边框或者padding后 出现水平滚动条*/
+    box-sizing: border-box;
+
+    /* 去除移动端按住元素的时候会出现高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+
+    /* 去掉所有移动端内边框 */
+    outline: none;
+    
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+    font-size: 0.16rem;
+}
+
+a {
+    text-decoration: none;  //去掉下划线
+    color: #000;
+}
+
+li {
+    list-style: none;  //去掉小圆点
+}
+
+ul {
+    margin: 0;
+}
+
+input {
+    border: 0;  //去掉外边框
+}
+
+img {
+    /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+p {
+    margin: 0;
+}
+
+// 清除浮动带来的影响
+.clearfix:after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+// 头部公共样式区域
+#header {
+    width: 100%;
+    background-color: #fe4a65;
+    text-align: center;
+    position: relative;
+    font-size: 0.2rem;
+    color: #fff;
+    >span {
+        display: inline-block;
+        height: 0.48rem;
+        line-height: 0.48rem;
+    }
+
+    >.arrow {
+        float: left;
+        padding: 0.07rem;
+        >a {
+            display: block;
+            width: 0.34rem;
+            height: 0.34rem;
+            line-height: 0.34rem;
+            font-size: 0.29rem;
+            color: #fff;
+        }
+    }
+
+    >.download {
+        float: right;
+        padding: 0.07rem;
+        >a {
+            display: block;
+            width: 0.34rem;
+            height: 0.34rem;
+            >img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// 底部公共样式区域
+#footer {
+    margin-top: 0.2rem;
+    background-color: #ebebeb;
+    >.buttonList {
+        border-top: 0.01rem solid #ccc;
+        border-bottom: 0.01rem solid #ccc;
+        >ul {
+            display: flex;
+            flex-wrap: wrap;
+            >li {
+                flex: 1;
+                text-align: center;
+                line-height: 0.34rem;
+
+                &:nth-child(2) {
+                    border-right: 0.01rem solid #ccc;
+                    border-left: 0.01rem solid #ccc;
+                }
+
+                >a:hover {
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    >.text {
+        padding: 0.15rem 0;
+        font-size: 0.12rem;
+        >p:first-child {
+            text-align: center;
+            >a:first-child {
+                color: red;
+            }
+            >a:last-of-type:hover {
+                color: #666;
+            }
+        }
+        >p:last-child {
+            text-align: center;
+        }
+    }
+}

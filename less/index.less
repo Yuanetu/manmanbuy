@@ -1,0 +1,367 @@
+// 引入公共样式
+@import 'base-one.less';
+
+
+// 导航栏样式区域
+#nav {
+    >.container {
+        >ul {
+            &:last-of-type {
+                display: none;
+            }
+            > li {
+                padding: 5px;
+                a {
+                    display: block;
+                    text-align: center;
+                    font-size: 13px;
+                    text-decoration: none;
+                    img {
+                        width: 70px;
+                    }
+                    p {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 主体样式区域
+#mian {
+    background-color: #efefef;
+
+    >.title {
+        width: 100%;
+        background-color: #ff9000;
+        background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+        padding: 0 10px;
+        >a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            >h4 {
+                flex: 1;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            >img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    >.products {
+        >ul {
+            background-color: #fff;
+
+            >li {
+                padding: 14px 8px;
+                border-bottom: 1px solid #e0e0e0;
+                >a {
+                    display: block;
+                    text-decoration: none;
+                    >.icon {
+                        float: left;
+                        >img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+
+                    >.info {
+                        padding-left: 110px;
+                        >.title {
+                            font-size: 15px;
+                            min-height: 65px;
+                            word-break: break-all;   //允许在单词内换行
+                            >span {
+                                color: #ff6c00;
+                            }
+                        }
+
+                        >.other {
+                            font-size: 12px;
+                            color: #a1a1a1;
+                            margin-top: 18px;
+                            >span:last-of-type {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .more-info {
+        width: 100%;
+        text-align: center;
+        // padding: px;
+        >a {
+            display: block;
+            height: 32px;
+            line-height: 30px;
+            // margin: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            background-color: #fff;
+            font-size: 12px;
+        }
+    }
+
+    >.DC {
+        width: 100%;
+        margin: 15px 0 6px 0;
+
+        >a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            background-color: #ff9000;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+            padding:0 10px;
+
+            >h4 {
+                flex: 1;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            >img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+
+// APP样式区域
+#app {
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    >a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        >.man {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ff5405;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            margin-left: 11px;
+        }
+    
+        >.appDownload {
+            background-color: #ff5405;
+            border-radius: 10px;
+            font-size: 12px;
+            padding: 2px 10px;
+        }
+    }
+}
+
+// 页面加载动画样式区域
+#loading{
+    background-color: rgba(255,255,255,1);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: -50px;	
+}
+.object{
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255,255,255,0);
+    margin-right: auto;
+    margin-left: auto;
+    border: 4px solid rgba(239,74,74,1);
+    left: 37px;
+    top: 37px;
+    position: absolute;
+}
+
+#first_object{
+    -webkit-animation: first_object 1s infinite;
+    animation: first_object 1s infinite;
+    -webkit-animation-delay: 0.5s; 
+    animation-delay: 0.5s; 
+}
+#second_object{
+    -webkit-animation: second_object 1s infinite;
+    animation: second_object 1s infinite;
+}	
+#third_object{
+    -webkit-animation: third_object 1s infinite;
+    animation: third_object 1s infinite;
+    -webkit-animation-delay: 0.5s; 
+    animation-delay: 0.5s; 
+}	
+#forth_object{
+    -webkit-animation: forth_object 1s infinite;
+    animation: forth_object 1s infinite;
+}	
+@-webkit-keyframes first_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+ 50% {
+    -ms-transform: translate(150%,150%) scale(2,2); 
+       -webkit-transform: translate(150%,150%) scale(2,2); 
+    transform: translate(150%,150%) scale(2,2);
+     }
+     
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }	 
+}		
+@keyframes first_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+ 50% {
+    -ms-transform: translate(150%,150%) scale(2,2); 
+       -webkit-transform: translate(150%,150%) scale(2,2); 
+    transform: translate(150%,150%) scale(2,2);
+     }
+     
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+}
+@-webkit-keyframes second_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+ 50% {
+    -ms-transform: translate(-150%,150%) scale(2,2); 
+       -webkit-transform: translate(-150%,150%) scale(2,2);
+    transform: translate(-150%,150%) scale(2,2);
+    }
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+}		
+@keyframes second_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+ 50% {
+    -ms-transform: translate(-150%,150%) scale(2,2); 
+       -webkit-transform: translate(-150%,150%) scale(2,2);
+    transform: translate(-150%,150%) scale(2,2);
+    }
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+}
+@-webkit-keyframes third_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }	
+ 50% {
+    -ms-transform: translate(-150%,-150%) scale(2,2); 
+       -webkit-transform: translate(-150%,-150%) scale(2,2);
+    transform: translate(-150%,-150%) scale(2,2);
+    }
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }	
+}		
+@keyframes third_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }	
+ 50% {
+    -ms-transform: translate(-150%,-150%) scale(2,2); 
+       -webkit-transform: translate(-150%,-150%) scale(2,2);
+    transform: translate(-150%,-150%) scale(2,2);
+    }
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+}
+@-webkit-keyframes forth_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+ 50% {
+    -ms-transform: translate(150%,-150%) scale(2,2); 
+       -webkit-transform: translate(150%,-150%) scale(2,2);
+    transform: translate(150%,-150%) scale(2,2);
+    }
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }	
+}		
+@keyframes forth_object {
+ 0% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+ 50% {
+    -ms-transform: translate(150%,-150%) scale(2,2); 
+       -webkit-transform: translate(150%,-150%) scale(2,2);
+    transform: translate(150%,-150%) scale(2,2);
+    }
+ 100% {
+    -ms-transform: translate(1,1) scale(1,1); 
+       -webkit-transform: translate(1,1) scale(1,1); 
+    transform: translate(1,1) scale(1,1); 
+     }
+}
+
+

@@ -1,0 +1,445 @@
+// 引入公共样式
+@import 'base-one.less';
+
+// 导航栏样式区域
+#nav {
+    padding: 0px 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    >ul {
+        margin: 0;
+        >li {
+            float: left;
+            margin-right: 5px;
+            >a {
+                display: block;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+        >.filtrate{
+            float: right;
+            margin: 0;
+            >a {
+                width: 63px;
+                border-radius: 10px;
+                text-align: center;
+                line-height: 30px;
+                background-color: #eee;
+                box-shadow: 0px 0px 1px 1px #ccc;
+            }
+        }
+    }
+}
+
+
+//商品列表样式区域
+#products {
+    margin-top: 10px;
+    >ul {
+        >li {
+            border-bottom: 1px solid #e0e0e0;
+            >a {
+                display: block;
+                padding: 10px;
+                >.icon {
+                    float: left;
+                    >img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            
+                >.text {
+                    margin-left: 110px;
+                    >p {
+                        &:first-child {
+                            font-size: 15px;
+
+                        }
+                        &:nth-of-type(2) {
+                            line-height: 40px;
+                            font-size: 18px;
+                            color: red;
+                        }
+
+                        &:last-child {
+                            font-size: 12px;
+                            margin: 10px;
+                            >span {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 分页区域
+#page {
+    display: flex;
+    >div {
+        flex: 1;
+        text-align: center;
+        >a {
+            display: block;
+            width: 82px;
+            height: 33px;
+            margin: 0 auto;
+            line-height: 33px;
+            box-shadow: 1px 1px 1px 1px #ccc;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+    }
+
+    select {
+        width: 82px;
+        height: 33px;
+        padding: 0px 14px;
+    }
+}
+
+
+// 筛选样式区域
+#filtratePage {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    background-color: #fff;
+    z-index: 999;
+    display: none;
+    >.headTitle {
+        text-align: center;
+        font-size: 20px;
+        line-height: 44px;
+        position: relative;
+        >i {
+            font-size: 20px;
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            line-height: 44px;
+            text-align: center;
+            right: 0;
+        }
+    }
+
+    >.content {
+        padding: 12px;
+        >.rows {
+            position: relative;
+            width: 100%;
+            >.rowhead {
+                padding: 10px 0;
+                >a {
+                    position: absolute;
+                    right: 0;
+                    font-size: 17px;
+                }
+            }
+            >.rowbody {
+                max-height: 70px;
+                overflow: hidden;
+
+                &.heightauto {
+                    max-height: 100% !important;
+                }
+                >ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    >li {
+                        width: 30%;
+                        height: 28px;
+                        text-align: center;
+                        line-height: 28px;
+                        margin: 0 5px 10px 0;
+                        background-color: #f2f2f2;
+                        font-size: 12px;
+                        border-radius: 10px;
+
+                        //设置超出内容为省略号
+                        overflow: hidden;
+                        text-overflow: ellipsis;  
+                        white-space: nowrap;
+
+                        >a {
+                            color: #5a5a5a;
+                        }
+
+                        &.active {
+                            background-color: #ff5000;
+                            >a {
+                                color: #fff;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 遮罩层样式区域
+#mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 998;
+    display: none;
+}
+
+
+// 页面加载动画样式区域
+#loading{
+    background-color: #3498db;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 118px;
+    width: 72px;
+    margin-top: -59px;
+    margin-left: -36px;
+}
+.object{
+    width: 26px;
+    height: 26px;
+    background-color:#FFF;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 20px;
+    }
+.object:nth-child(2n+0) {
+    margin-right: 0px;
+}
+#object_one {
+    -webkit-animation: object_one 1s infinite;
+    animation: object_one 1s infinite;
+    }
+#object_two {
+    -webkit-animation: object_two 1s infinite;
+    animation: object_two 1s infinite;
+    }
+#object_three {
+    -webkit-animation: object_three 1s infinite;
+    animation: object_three 1s infinite;
+    }
+#object_four {
+    -webkit-animation: object_four 1s infinite;
+    animation: object_four 1s infinite;
+    }
+#object_five {
+    -webkit-animation: object_five 1s infinite;
+    animation: object_five 1s infinite;
+    }
+#object_six {
+    -webkit-animation: object_six 1s infinite;
+    animation: object_six 1s infinite;
+    }
+@-webkit-keyframes object_one {
+  50% {
+    -ms-transform: translate(-100px,46px) rotate(-179deg);
+       -webkit-transform: translate(-100px,46px) rotate(-179deg); 
+    transform: translate(-100px,46px) rotate(-179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+}
+
+@keyframes object_one {
+  50% {
+    -ms-transform: translate(-100px,46px) rotate(-179deg);
+       -webkit-transform: translate(-100px,46px) rotate(-179deg); 
+    transform: translate(-100px,46px) rotate(-179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }	  
+}
+@-webkit-keyframes object_two {
+
+  50% {
+    -ms-transform: translate(100px,46px) rotate(179deg);
+       -webkit-transform: translate(100px,46px) rotate(179deg); 
+    transform: translate(100px,46px) rotate(179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+}
+
+@keyframes object_two {		
+  50% {
+    -ms-transform: translate(100px,46px) rotate(179deg);
+       -webkit-transform: translate(100px,46px) rotate(179deg); 
+    transform: translate(100px,46px) rotate(179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+  
+}
+
+@-webkit-keyframes object_three {
+
+  50% {
+    -ms-transform: translate(-100px,0) rotate(-179deg);
+       -webkit-transform: translate(-100px,0) rotate(-179deg);
+    transform: translate(-100px,0) rotate(-179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+
+}
+
+@keyframes object_three {
+    
+  50% {
+    -ms-transform: translate(-100px,0) rotate(-179deg);
+       -webkit-transform: translate(-100px,0) rotate(-179deg);
+    transform: translate(-100px,0) rotate(-179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+  
+}
+
+@-webkit-keyframes object_four {
+
+  50% {
+ -ms-transform: translate(100px,0) rotate(179deg);
+       -webkit-transform: translate(100px,0) rotate(179deg);
+    transform: translate(100px,0) rotate(179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+
+}
+
+@keyframes object_four {
+    
+  50% {
+ -ms-transform: translate(100px,0) rotate(179deg);
+       -webkit-transform: translate(100px,0) rotate(179deg);
+    transform: translate(100px,0) rotate(179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+  
+}
+@-webkit-keyframes object_five {
+
+  50% {
+   -ms-transform: translate(-100px,-46px) rotate(-179deg);
+       -webkit-transform: translate(-100px,-46px) rotate(-179deg);
+    transform: translate(-100px,-46px) rotate(-179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+
+}
+@keyframes object_five {
+    
+  50% {
+   -ms-transform: translate(-100px,-46px) rotate(-179deg);
+       -webkit-transform: translate(-100px,-46px) rotate(-179deg);
+    transform: translate(-100px,-46px) rotate(-179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+  
+}
+@-webkit-keyframes object_six {
+
+  50% {
+   -ms-transform: translate(100px,-46px) rotate(179deg);
+       -webkit-transform: translate(100px,-46px) rotate(179deg);
+    transform: translate(100px,-46px) rotate(179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+
+}
+@keyframes object_six {
+    
+  50% {
+   -ms-transform: translate(100px,-46px) rotate(179deg);
+       -webkit-transform: translate(100px,-46px) rotate(179deg);
+    transform: translate(100px,-46px) rotate(179deg);
+      }
+ 
+  100% {
+    -ms-transform: translate(0,0); 
+       -webkit-transform: translate(0,0); 
+    transform: translate(0,0); 
+      }
+  
+}

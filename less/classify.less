@@ -1,0 +1,169 @@
+// 引入公共样式
+@import 'base-one.less';
+
+// 主体样式区域
+#main {
+    padding: 5px;
+    background-color: #f2f2f2;
+    >.dropdown {
+        background-color: #ebebeb;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        >.title {
+            >a {
+                display: block;
+                width: 100%;
+                height: 40px;
+                font-size: 16px;
+                line-height: 40px;
+                padding-left: 16px;
+                font-weight: bold;
+                border-bottom: 1px solid #ccc;
+                color: #000;
+                >i {
+                    float: right;
+                    font-size: 20px;
+                    padding: 10px 10px;
+                    color: #ccc;
+                }
+            }
+        }
+        >.content {
+            background-color: #fff;
+            >ul {
+                display: flex;
+                flex-wrap: wrap;
+                display: none;
+                border-bottom: 2px solid #ccc;
+                >li {
+                    width: 33.33%;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    float: left;
+                    &:nth-child(3n) {
+                        border-left: none;
+                    }
+                }
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+
+
+// 页面加载动画样式区域
+#loading{
+    background-color: #2980b9;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 118px;
+    width: 118px;
+    margin-top: -59px;
+    margin-left: -59px;
+
+}
+
+.object{
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 20px;
+    }
+.object:nth-child(3n+0) {
+    margin-right: 0px;
+}
+
+
+#object_one {
+    -webkit-animation: animate 1s -0.9s ease-in-out infinite ;
+    animation: animate 1s -0.9s ease-in-out infinite ;
+    }
+#object_two {
+    -webkit-animation: animate 1s -0.8s ease-in-out infinite ;
+    animation: animate 1s -0.8s ease-in-out infinite ;
+    }
+#object_three {
+    -webkit-animation: animate 1s -0.7s ease-in-out infinite ;
+    animation: animate 1s -0.7s ease-in-out infinite ;
+    }
+#object_four {
+    -webkit-animation: animate 1s -0.6s ease-in-out infinite ;
+    animation: animate 1s -0.6s ease-in-out infinite ;
+    }
+#object_five {
+    -webkit-animation: animate 1s -0.5s ease-in-out infinite ;
+    animation: animate 1s -0.5s ease-in-out infinite ;
+    }
+#object_six {
+    -webkit-animation: animate 1s -0.4s ease-in-out infinite ;
+    animation: animate 1s -0.4s ease-in-out infinite ;
+    }
+#object_seven {
+    -webkit-animation: animate 1s -0.3s ease-in-out infinite ;
+    animation: animate 1s -0.3s ease-in-out infinite ;
+    }
+#object_eight {
+    -webkit-animation: animate 1s -0.2s ease-in-out infinite ;
+    animation: animate 1s -0.2s ease-in-out infinite ;
+    }
+#object_nine {
+    -webkit-animation: animate 1s -0.1s ease-in-out infinite ;
+    animation: animate 1s -0.1s ease-in-out infinite ;
+    }
+
+@-webkit-keyframes animate {
+ 
+
+  50% {
+    -ms-transform: scale(1.5,1.5); 
+       -webkit-transform: scale(1.5,1.5); 
+    transform: scale(1.5,1.5); 
+      }
+ 
+  100% {
+    -ms-transform: scale(1,1); 
+       -webkit-transform: scale(1,1); 
+    transform: scale(1,1); 
+      }
+
+}
+
+@keyframes animate {
+  50% {
+    -ms-transform: scale(1.5,1.5); 
+       -webkit-transform: scale(1.5,1.5); 
+    transform: scale(1.5,1.5); 
+      }
+ 
+  100% {
+    -ms-transform: scale(1,1); 
+       -webkit-transform: scale(1,1); 
+    transform: scale(1,1); 
+      }
+  
+}
+
+

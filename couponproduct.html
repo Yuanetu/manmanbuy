@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 2.引入字体图标的css -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入商品优惠卷的less文件 -->
+    <link rel="stylesheet/less" href="./less/couponproduct.less">
+    <!-- 4.引入less的编辑器文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body onload="load()">
+    <!-- 头部区域 -->
+    <header id="header" class="clearfix">
+        <span>开封菜优惠卷</span>
+        <!-- 返回箭头区域 -->
+        <div class="arrow">
+            <a href="coupon.html" class="fa fa-arrow-circle-left"></a>
+        </div>
+        <!-- 下载区域 -->
+        <div class="download">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <section class="title">
+            --点餐前出示手机中的优惠卷,即可享受优惠--
+        </section>
+        <section class="content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="icon-text clearfix">
+                            <img src="//gaitaobao1.alicdn.com/tfscom/i2/1951405497/TB2CnpUzxuTBuNkHFNRXXc9qpXa_!!1951405497-0-item_pic.jpg_300x300q90.jpg_.webp"
+                                alt="">
+                            <P>简约现代绒毛毯卧室满铺可爱客厅茶几垫沙发榻榻米床边地毯可定制</P>
+                            <P>¥8</P>
+                        </div>
+                        <p class="time">有效期至10月31号</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 按钮区域 -->
+        <section class="buttonList">
+            <ul>
+                <li>
+                    <a href="javascript: void(0);">登录</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">注册</a>
+                </li>
+                <li>
+                    <a href="#header" class="fa fa-arrow-circle-up">返回顶部</a>
+                </li>
+            </ul>
+        </section>
+        <!-- 文字区域 -->
+        <section class="text">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                <span> -- 掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </section>
+    </footer>
+
+    <!-- 轮播图区域 -->
+    <section id="slide"></section>
+
+    <!-- 左右箭头区域 -->
+    <section id="arrow">
+        <div class="l-arrow fa fa-arrow-circle-left"></div>
+        <div class="r-arrow fa fa-arrow-circle-right"></div>
+    </section>
+
+    <!-- 遮罩层区域 -->
+    <section id="mask">
+    </section>
+
+    <!-- 关闭按钮注意 -->
+    <section id="close">X</section>
+
+    <!-- 页面loading区域 -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5.引入jQuery的js文件 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <!-- 6.引入bootstrap的js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入商品优惠卷的js文件 -->
+    <script src="./js/couponproduct.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 2.引入字体图标的css -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入商品详情的less文件 -->
+    <link rel="stylesheet/less" href="./less/productDetails.less">
+    <!-- 4.引入less的编辑器文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body onload="load()">
+    <!-- 头部区域 -->
+    <header id="header">
+        <!-- logo区域 -->
+        <div class="logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <!-- 下载区域 -->
+        <div class="download">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 搜索框区域 -->
+    <section id="search">
+        <form action="">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button">搜索</button>
+        </form>
+    </section>
+
+    <!-- 导航栏区域 -->
+    <nav id="nav">
+        <ul class="clearfix">
+            <li>
+                <a href="./index.html">首页 ></a>
+            </li>
+            <li class="category">
+                <a href="#">返回 ></a>
+            </li>
+            <li>
+                <a href="javascript: location.reload()">乐视TV(Letv)S50</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 商品详情信息区域 -->
+    <main id="main">
+        <section class="detail">
+            <!-- <div class="info">
+                海信(Hisense) LED55K5100U 55英寸 4K 智能平面电视
+            </div>
+            <div class="icon">
+                <img src="http://www.zuyushop.com/ProPic/20189/Thumb/Thumb_2018090009563071541.jpg" alt="">
+            </div>
+            <a href="#">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+            </a> -->
+        </section>
+
+        <section class="tab">
+            <ul>
+                <li>
+                    <a href="#">比价购买</a>
+                </li>
+                <li>
+                    <a href="#">产品参数</a>
+                </li>
+                <li>
+                    <a href="#">优选评价</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="price">
+            <div class="text1">
+                <!-- <span>
+                    <i>JD</i>
+                    京东商城
+                </span>
+                <span>¥8199.00</span>
+                <a href="#">去购买</a> -->
+            </div>
+            <div class="text2"> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+        </section>
+    </main>
+
+    <!-- 网友评价区域 -->
+    <section id="evaluate">
+        <div class="title">
+            优选网友评价
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <p>周沁怡
+                        <span>2018/6/6</span>
+                    </p>
+                    <p>购买者:京东</p>
+                    <p>上查了最低价还用了一张优惠券入手的，买的时候应该是历史最低价的。</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 更多区域 -->
+    <section id="more">
+        <a href="#">查看更多评价</a>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 按钮区域 -->
+        <section class="buttonList">
+            <ul>
+                <li>
+                    <a href="javascript: void(0);">登录</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">注册</a>
+                </li>
+                <li>
+                    <a href="#header" class="fa fa-arrow-circle-up">返回顶部</a>
+                </li>
+            </ul>
+        </section>
+        <!-- 文字区域 -->
+        <section class="text">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                <span> -- 掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </section>
+    </footer>
+
+    <!-- 页面loading区域 -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_four"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_one"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 5.引入jQuery的js文件 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <!-- 6.引入bootstrap的js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入商品详情的js文件 -->
+    <script src="./js/productDetails.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+// 引入公共样式
+@import 'base-one.less';
+
+// 导航栏样式区域
+#nav {
+    padding: 0px 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    >ul {
+        margin: 0;
+        >li {
+            float: left;
+            margin-right: 5px;
+            >a {
+                display: block;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+
+// 商品详情信息样式区域
+#main {
+    padding: 10px 0;
+    >.detail {
+        padding: 10px;
+        text-align: center;
+        position: relative;
+
+        >a {
+            position: absolute;
+            width: 39px;
+            height: 39px;
+            bottom: 20px;
+            right: 30px;
+            >img {
+                width: 100%;
+                height: 100%;
+                max-width: 160px;
+                max-height: 160px;
+            }
+        }
+    }
+
+    >.tab {
+        border-top: solid 1px #c14d00;
+        border-bottom: 1px solid #c14d00;
+        >ul {
+            display: flex;
+            >li {
+                flex: 1;
+                >a {
+                    color: #fff;
+                    display: block;
+                    height: 34px;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 34px;
+                }
+
+                &:first-child {
+                    background-color: #ffbb00;
+                    background: -webkit-gradient(linear,0 0,0 100%,from(#ffa632),to(#ff9000));
+                }
+
+                &:nth-child(2) {
+                    background-color: #ffbb00;
+                    background: -webkit-gradient(linear,0 0,0 100%,from(#ffd050),to(#ffbb00));
+                    border-left: 1px solid #c14d00;
+                    border-right: 1px solid #c14d00;
+                }
+
+                &:last-child {
+                    background-color: #ffbb00;
+                    background: -webkit-gradient(linear,0 0,0 100%,from(#ffd050),to(#ffbb00));
+                }
+            }
+        }
+    }
+
+    >.price {
+        >.text1 {
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 10px;
+            // >span:first-child {
+            //     >i {
+            //         font-size: 12px;
+            //         color: #fff;
+            //         background-color: #f10215;
+            //         padding: 1px;
+            //     }
+            // }
+
+            // >span:last-of-type {
+            //     position: absolute;
+            //     right: 85px;
+            //     color: red;
+            // }
+
+            // >a {
+            //     font-size: 12px;
+            //     position: absolute;
+            //     right: 10px;
+            //     width: 55px;
+            //     height: 25px;
+            //     line-height: 25px;
+            //     text-align: center;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            //     background-color: #fe5101;
+            //     color: #fff;
+            //     border-radius: 5px;
+            // }
+        }
+
+        >.text2 {
+            padding: 10px;
+            color: rgb(163, 160, 160);
+        }
+    }
+}
+
+
+// 网友评价样式区域
+#evaluate {
+    >.title {
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        background-color: #dbdbdb;
+        border-top: 4px solid #7a7a7a;
+        margin-bottom: 10px;
+    }
+
+    >.content {
+        // padding: 10px;
+        >ul {
+            >li {
+                border-bottom: 1px solid #ccc;
+                padding: 10px;
+                >p:first-of-type {
+                    >span {
+                        float: right;
+                    }
+                }
+
+                >p:nth-child(2) {
+                    text-align: right;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+
+// 更多样式区域
+#more {
+    padding: 10px;
+    >a {
+        display: block;
+        text-align: center;
+        line-height: 32px;
+        background-color: #d4d4d4;
+        background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+        color: #000;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #666;
+        border-bottom: 1px solid #bababa;
+    }
+}
+
+
+// 页面动画加载样式区域
+#loading{
+    background-color: #17607d;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+}
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    -ms-transform: rotate(-135deg); 
+       -webkit-transform: rotate(-135deg); 
+    transform: rotate(-135deg);
+}
+.object{
+
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    border-top: 5px solid #FFF;
+    border-bottom: 5px solid transparent;
+    border-left:  5px solid #FFF;
+    border-right: 5px solid transparent;
+    
+    -webkit-animation: animate 2s infinite;
+    animation: animate 2s infinite;	
+
+    }
+#object_one{
+    left: 75px;
+    top: 75px;
+    width: 50px;
+    height: 50px;
+    }
+                            
+#object_two{
+    left: 65px;
+    top: 65px;
+    width: 70px;
+    height: 70px;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    }
+        
+#object_three{
+    left: 55px;
+    top: 55px;
+    width: 90px;
+    height: 90px;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    }
+#object_four{
+    left: 45px;
+    top: 45px;
+    width: 110px;
+    height: 110px;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    
+    }	
+
+@-webkit-keyframes animate {
+ 
+
+50% {
+
+    -ms-transform: rotate(360deg) scale(0.8); 
+       -webkit-transform: rotate(360deg) scale(0.8); 
+    transform: rotate(360deg) scale(0.8); 
+  }
+}
+
+@keyframes animate {
+    
+50% {
+
+    -ms-transform: rotate(360deg) scale(0.8); 
+       -webkit-transform: rotate(360deg) scale(0.8); 
+    transform: rotate(360deg) scale(0.8); 
+  }	
+}
+

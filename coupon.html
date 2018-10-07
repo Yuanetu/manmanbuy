@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 2.引入字体图标的css -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入优惠卷的less文件 -->
+    <link rel="stylesheet/less" href="./less/coupon.less">
+    <!-- 4.引入less的编辑器文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body onload="load()">
+    <!-- 头部区域 -->
+    <header id="header" class="clearfix">
+        <span>优惠卷</span>
+        <!-- 返回箭头区域 -->
+        <div class="arrow">
+            <a href="index.html" class="fa fa-arrow-circle-left"></a>
+        </div>
+        <!-- 下载区域 -->
+        <div class="download">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main" class="container">
+        <ul class="row">
+            <!-- <li class="col-xs-4">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li class="col-xs-4">
+                <a href="#"></a>
+            </li>
+            <li class="col-xs-4">
+                <a href="#"></a>
+            </li>
+            <li class="col-xs-4">
+                <a href="#"></a>
+            </li> -->
+        </ul>
+    </main>
+
+    <!-- 导航栏区域 -->
+    <nav id="nav">
+        <ul class="clearfix">
+            <li>
+                <a href="./index.html">首页 ></a>
+            </li>
+            <li>
+                <a href="javascript: location.reload()">优惠卷</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 按钮区域 -->
+        <section class="buttonList">
+            <ul>
+                <li>
+                    <a href="javascript: void(0);">登录</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">注册</a>
+                </li>
+                <li>
+                    <a href="#header" class="fa fa-arrow-circle-up">返回顶部</a>
+                </li>
+            </ul>
+        </section>
+        <!-- 文字区域 -->
+        <section class="text">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                <span> -- 掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </section>
+    </footer>
+
+    <!-- 页面loading区域 -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <!-- 5.引入jQuery的js文件 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <!-- 9.引入懒加载的js -->
+    <script src="./lib/jquery.lazyload.js"></script>
+    <!-- 6.引入bootstrap的js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入优惠卷的js文件 -->
+    <script src="./js/coupon.js"></script>
+</body>
+
+</html>

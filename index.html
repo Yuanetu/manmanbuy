@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 添加视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 2.引入字体图标的css -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入首页的less文件 -->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <!-- 4.引入less的编辑器文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body onload="load()">
+    <!-- 头部区域 -->
+    <header id="header">
+        <!-- logo区域 -->
+        <div class="logo">
+            <a href="#">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <!-- 下载区域 -->
+        <div class="download">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 搜索框区域 -->
+    <section id="search">
+        <form action="">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button">搜索</button>
+        </form>
+    </section>
+
+    <!-- 导航栏区域 -->
+    <nav id="nav">
+        <section class="container">
+            <!-- <ul class="row">
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="row">
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="row">
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+                <li class="col-xs-3">
+                    <a href="#">
+                        <img src="images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>
+            </ul> -->
+        </section>
+    </nav>
+
+    <!-- 主体区域 -->
+    <main id="mian">
+        <!-- 标题区域 -->
+        <section class="title">
+            <a href="#">
+                <h4>超值折扣推荐</h4>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </a>
+        </section>
+        <!-- 商品展示区域 -->
+        <section class="products">
+            <ul>
+                <!-- <li>
+                    <a href="#" class="clearfix">
+                        <div class="icon">
+                            <img src="http://wnzk-img.zuyushop.com/r_img/img/20181003/11/e4687439e77746379c3409b7b3e3e6db.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="title">HUGGIES 好奇 银装 婴儿成长裤 XXL号 66片
+                                <span>105元包邮（需拼团）</span>
+                            </div>
+                            <div class="other">
+                                <span>苏宁易购 | 10-03 14:18</span>
+                                <span>
+                                    <i class="fa fa-commenting-o"></i>
+                                    0
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li> -->
+            </ul>
+        </section>
+
+        <!-- 更多优惠信息 -->
+        <section class="more-info">
+            <a href="#">更多优惠信息 »</a>
+        </section>
+
+        <!-- 品牌排行 -->
+        <section class="DC">
+            <a href="#">
+                <h4>品牌排行</h4>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </a>
+        </section>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 按钮区域 -->
+        <section class="buttonList">
+            <ul>
+                <li>
+                    <a href="javascript: void(0);">登录</a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);">注册</a>
+                </li>
+                <li>
+                    <a href="#header" class="fa fa-arrow-circle-up">返回顶部</a>
+                </li>
+            </ul>
+        </section>
+        <!-- 文字区域 -->
+        <section class="text">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                <span> -- 掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </section>
+    </footer>
+
+    <!-- APP下载区域 -->
+    <section id="app">
+        <a href="#">
+            <div class="man">慢</div>
+            <div class="appDownload">App 下 载</div>
+        </a>
+    </section>
+
+    <!-- 页面loading区域 -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="first_object"></div>
+                <div class="object" id="second_object"></div>
+                <div class="object" id="third_object"></div>
+                <div class="object" id="forth_object"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5.引入jQuery的js文件 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <!-- 9.引入懒加载的js -->
+    <script src="./lib/jquery.lazyload.js"></script>
+    <!-- 6.引入bootstrap的js文件 -->
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 7.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入主页的js文件 -->
+    <script src="./js/index.js"></script>
+
+    <!-- 准备商品内容的模板 -->
+    <!-- {{@ }} 代表内容里如果有标签，就解析成HTML元素，否则只是当普通字符串 -->
+    <script type="text/html" id="tpl">
+        {{ each result value}}
+        <li>
+            <a href="#" class="clearfix">
+                <div class="icon">
+                    {{@ value.productImgSm }}
+                </div>
+                <div class="info">
+                    <div class="title">{{ value.productName }}
+                        <span>{{ value.productPinkage }}</span>
+                    </div>
+                    <div class="other">
+                        <span>{{ value.productFrom}} | {{ value.productTime }}</span>
+                        <span>
+                            <i class="fa fa-commenting-o"></i>
+                            {{ value.productComCount }}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each}}
+    </script>
+</body>
+
+</html>
